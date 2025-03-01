@@ -2,12 +2,12 @@ class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
         int n = nums.size();
-        k = k % n;  // Handle cases where k > n
+        k = k % n;
 
-        vector<int> temp(n);  // Extra space
+        vector<int> temp(n);
         for (int i = 0; i < n; i++) {
-            temp[(i + k) % n] = nums[i];  // Place elements at new positions
+            temp[(i + k) % n] = nums[i];
         }
-        nums = temp;  // Copy back
+        nums = temp;
     }
 };
